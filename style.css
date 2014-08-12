@@ -1,0 +1,24 @@
+body {
+	background:#fff;
+	font:12px arial,helvetica,sans-serif;
+	margin:10;
+	padding:10;	
+}
+div.pages div, div.pages a {
+	margin-right: 1px;
+	padding: 1px 5px 2px 5px;
+	border: 1px solid #999;
+	text-decoration: none;
+	font-size: 14px;
+    font-weight:bold;
+	color: #999;
+}
+div.pages div, div.pages a:hover {
+	border: 1px solid #999;
+    background-color:#CCC;
+    color:#fff;
+}
+div.pages .current {
+	border: 1px solid #999;
+    background-color:#CCC;
+}
