@@ -12,11 +12,14 @@ $visitor_year = date("Y");
 $visitor_refferer = GetHostByName($HTTP_REFERER);
 $visited_page = selfURL();
 
-//write the required data to database
-mysql_select_db($database_visitors, $visitors);
-$sql = "INSERT INTO visitors_table (visitor_ip, visitor_browser, visitor_hour,
- visitor_minute, visitor_date, visitor_day, visitor_month, visitor_year, 
- visitor_refferer, visitor_page) VALUES ('$visitor_ip', '$visitor_browser', 
+
+
+mysqli_query($visitors,"INSERT INTO visitors_table (visitors_ip, visitors_browser, visitors_hour,
+ visitors_minute, visitors_date, visitors_day, visitors_month, visitors_year, 
+ visitors_refferer, visitors_page) VALUES ('$visitor_ip', '$visitor_browser', 
  '$visitor_hour', '$visitor_minute', '$visitor_date', '$visitor_day', '$visitor_month', 
- '$visitor_year', '$visitor_refferer', '$visitor_page')";
-$result = mysql_query($sql) or trigger_error(mysql_error(),E_USER_ERROR);?>
+ '$visitor_year', '$visitor_refferer', '$visitor_page')");
+
+
+
+?>

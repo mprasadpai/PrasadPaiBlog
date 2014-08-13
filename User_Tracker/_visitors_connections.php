@@ -4,17 +4,8 @@ $database_visitors = "ppaidb";
 $username_visitors = "root";
 $password_visitors = "root";
 
-
-// Create connection
-$visitors=mysqli_connect($hostname_visitors,$username_visitors,$password_visitors,$database_visitors);
-
-// Check connection
-if (mysqli_connect_errno()) {
-	echo "Failed to connect to MySQL: " . mysqli_connect_error();
-	echo '</br>';
-}
-
-
+$visitors = mysql_connect($hostname_visitors, $username_visitors, $password_visitors) or trigger_error(mysql_error(),E_USER_ERROR);
+echo $visitors;
 
 function getBrowserType () {
 if (!empty($_SERVER['HTTP_USER_AGENT'])) 
@@ -122,5 +113,5 @@ function paginate($start,$limit,$total,$filePath,$otherParams) {
 	
 }
 
-
+echo 'Connections added'
 ?>
