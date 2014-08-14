@@ -9,7 +9,7 @@ $result = mysqli_query($visitors,"SELECT * FROM visitors_table");
 function showVisitors($visitors)
 {
 
-$result = mysqli_query($visitors,"SELECT TOP 7 * FROM visitors_table LIMIT 7");
+$result = mysqli_query($visitors,"SELECT * FROM visitors_table LIMIT 7");
 echo '<table style="width:100%; border:1px dashed #CCC" cellpadding="3">
 <tr>
 <td style="width:15%;border-bottom:1px solid #CCC">IP</td>

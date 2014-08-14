@@ -31,7 +31,7 @@ h1 {
 
 /* Add curved borders to various elements */
 
-#visitorsForm, #contactForm, .statusMessage, input[type="submit"], input[type="button"] {
+#twitterForm, #visitorsForm, #contactForm, .statusMessage, input[type="submit"], input[type="button"] {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;  
   border-radius: 10px;
@@ -40,7 +40,7 @@ h1 {
 
 /* Style for the contact form and status messages */
 
- #visitorsForm, #contactForm, .statusMessage {
+ #twitterForm, #visitorsForm, #contactForm, .statusMessage {
   color: #666;
   background-color: #ebedf2;
   background: -webkit-gradient( linear, left bottom, left top, color-stop(0,#dfe1e5), color-stop(1, #ebedf2) );
@@ -54,7 +54,7 @@ h1 {
 
 
 /* The form dimensions */
- #visitorsForm, #contactForm {
+#twitterForm,  #visitorsForm, #contactForm {
   width: 40em;
   height: 33em;
   padding: 0 1.5em 1.5em 1.5em;
@@ -64,7 +64,7 @@ h1 {
 
 /* Position the form in the middle of the window (if JavaScript is enabled) */
 
-#visitorsForm.positioned, #contactForm.positioned {
+#twitterForm.positioned, #visitorsForm.positioned, #contactForm.positioned {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -99,7 +99,7 @@ h1 {
 
 /* The header at the top of the form */
 
- #visitorsForm h2, #contactForm h2 {
+ #visitorsForm h2, #contactForm h2 , #twitterForm h2{
   font-size: 2em;
   font-style: italic;
   letter-spacing: .05em;
@@ -175,7 +175,7 @@ textarea {
 
 /* Place a border around focused fields, and hide the inner shadow */
 
-#visitorsForm*:focus, #contactForm *:focus {
+#visitorsForm*:focus, #contactForm *:focus, #twitterForm, *:focus {
   border: 1px solid #66f;
   outline: none;
   box-shadow: none;
@@ -239,61 +239,8 @@ input[type="button"] {
 }
 
 
-/* Header/footer boxes */
 
-.wideBox {
-  clear: both;
-  text-align: center;
-  margin: 70px;
-  padding: 10px;
-  background: #ebedf2;
-  border: 1px solid #333;
-}
-
-.wideBox h1 {
-  font-weight: bold;
-  margin: 20px;
-  color: #666;
-  font-size: 1.5em;
-}
 
 </style>
 
 
-/*
-Some IE7 hacks and workarounds
-
-[if lt IE 8]>
-<style>
-
-/* IE7 needs the fields to be floated as well as the labels 
-
-input, textarea {
-  float: right;
-}
-
-#formButtons {
-  clear: both;
-}
-
-
-  IE7 needs an ickier approach to vertical/horizontal centring with fixed positioning.
-  The negative margins are half the element's width/height.
-
-
-#visitorsForm.positioned, #contactForm.positioned, .statusMessage {
-  left: 50%;
-  top: 50%;
-}
-
-#visitorsForm.positioned, #contactForm.positioned {
-  margin-left: -20em;
-  margin-top: -16.5em;
-}
-
-.statusMessage {
-  margin-left: -15em;
-  margin-top: -1em;
-}
-
-*/

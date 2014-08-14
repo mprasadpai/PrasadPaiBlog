@@ -1,6 +1,7 @@
 <html>
 <head><Title>Prasad Pai Blog</Title>
 <link rel="stylesheet" type="text/css" href="Feedback/Feedback.css">
+
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 <script type="text/javascript" src="Feedback/FeedBack.js"></script>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
@@ -11,22 +12,32 @@
 
 <a href="#visitorsForm"><input type="button" id="btnVisitors" value="Visitors"></input></a>
 <a href="#contactForm"><input type="button" id="btnFeedback" value="Feedback"></input></a>
+<a href="#twitterForm"><input type="button" id="btnTwitter" value="Twitter"></input></a>
+
+
+ 
+<form id="twitterForm" method="post">
+ <input type="button" id="cancelTweet" name="cancel" value="Cancel" />
+<?php
+//include ( $_SERVER['DOCUMENT_ROOT'] . '/PrasadPaiBlog/Twitter/index.php');
+//showTweets();
+?>
+</form>
+
+
+
 
 <form id="visitorsForm" method="post">
-
  <h2>Visitors Details</h2>
-  <div id="formButtons">    
-  
-  <?php
+ <div id="formButtons">     
+ <?php
 include ( $_SERVER['DOCUMENT_ROOT'] . '/PrasadPaiBlog/User_Tracker/visitor_tracking.php');
 include ( $_SERVER['DOCUMENT_ROOT'] . '/PrasadPaiBlog/User_Tracker/display_visits.php');
 echo 'You are Visitor Number :' . $result->num_rows .'</br>';
 showVisitors($visitors);
-?>
-  
-  <input type="button" id="cancel1" name="cancel" value="Cancel" />
-  </div>
-
+?>  
+<input type="button" id="cancel1" name="cancel" value="Cancel" />
+</div>
 </form>
 
 <form id="contactForm" action="processForm.php" method="post">
@@ -36,7 +47,7 @@ showVisitors($visitors);
   <ul>
 
     <li>
-      <label for="senderName">Your Names</label>
+      <label for="senderName">Your Name</label>
       <input type="text" name="senderName" id="senderName" placeholder="Please type your name" required="required" maxlength="40" />
     </li>
 

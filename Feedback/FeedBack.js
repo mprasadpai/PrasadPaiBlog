@@ -16,6 +16,7 @@ function init() {
   // Position the form so it sits in the centre of the browser window.
    $('#contactForm').hide().submit( submitForm ).addClass( 'positioned' );
    $('#visitorsForm').hide().addClass( 'positioned' );
+   $('#twitterForm').hide().addClass( 'positioned' );
 
   // When the "Send us an email" link is clicked:
   // 1. Fade the content out
@@ -40,6 +41,14 @@ function init() {
 	    return false;
 	  } );
   
+  
+  $('a[href="#twitterForm"]').click( function() {
+	    $('#content').fadeTo( 'slow', .2 );
+	    $('#twitterForm').fadeIn( 'slow', function() {	 
+	    } )
+	    return false;
+	  } );
+  
   // When the "Cancel" button is clicked, close the form
   $('#cancel').click( function() { 
     $('#contactForm').fadeOut();
@@ -51,7 +60,11 @@ function init() {
 	    $('#content').fadeTo( 'slow', 1 );
 	  } ); 
 	  
-	   
+ $('#cancelTweet').click( function() { 
+	    $('#twitterForm').fadeOut();
+	    $('#content').fadeTo( 'slow', 1 );
+	  } ); 
+	  
   // When the "Escape" key is pressed, close the form
   $('#contactForm').keydown( function( event ) {
     if ( event.which == 27 ) {
