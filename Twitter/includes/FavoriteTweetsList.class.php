@@ -2,7 +2,7 @@
 
 class FavoriteTweetsList{
 	private $cb;
-	const cache = "cache_tweets.ser";
+	const cache = "Twitter/cache_tweets.ser";
 	
 	public function __construct($credentials){
 

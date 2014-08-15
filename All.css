@@ -1,0 +1,568 @@
+/* Add some margin to the page and set a default font and colour */
+
+body {
+  margin: 30px;
+  font-family: "Georgia", serif;
+  line-height: 1.8em;
+  color: #333;
+}
+
+h1 {
+  font-weight: bold;
+  margin: 20px;
+  color: #666;
+  font-size: 1.5em; 
+}
+
+/* Set the content dimensions */
+
+#content {
+  width: 800px;
+  padding: 50px;
+  margin: 0 auto;
+  display: block;
+  font-size: 1.2em;
+}
+
+#content h2 {
+  line-height: 1.5em;
+}
+
+
+/* Add curved borders to various elements */
+ #contactForm, .statusMessage, input[type="submit"], input[type="button"] {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;  
+  border-radius: 10px;
+}
+
+
+/* Style for the contact form and status messages */
+
+#contactForm, .statusMessage {
+  color: #666;
+  background-color: #ebedf2;
+  background: -webkit-gradient( linear, left bottom, left top, color-stop(0,#dfe1e5), color-stop(1, #ebedf2) );
+  background: -moz-linear-gradient( center bottom, #dfe1e5 0%, #ebedf2 100% );  
+  border: 1px solid #aaa;
+  -moz-box-shadow: 0 0 1em rgba(0, 0, 0, .5);
+  -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, .5);
+  box-shadow: 0 0 1em rgba(0, 0, 0, .5);
+  opacity: .95;
+}
+
+
+/* The form dimensions */
+#contactForm {
+  width: 40em;
+  height: 33em;
+  padding: 0 1.5em 1.5em 1.5em;
+  margin: 0 auto;
+}
+
+
+/* Position the form in the middle of the window (if JavaScript is enabled) */
+
+#contactForm.positioned {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+
+/* Dimensions and position of the status messages */
+
+.statusMessage {
+  display: none;
+  margin: auto;
+  width: 30em;
+  height: 2em;
+  padding: 1.5em;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.statusMessage p {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* The header at the top of the form */
+
+#contactForm h2 {
+  font-size: 2em;
+  font-style: italic;
+  letter-spacing: .05em;
+  margin: 0 0 1em -.75em;
+  padding: 1em;
+  width: 19.5em;  
+  color: #aeb6aa;
+  background: #dfe0e5 url('images/stamp.jpg') no-repeat 15em -3em; /* http://morguefile.com/archive/display/606433 */
+  border-bottom: 1px solid #aaa;
+  -moz-border-radius: 10px 10px 0 0;
+  -webkit-border-radius: 10px 10px 0 0;  
+  border-radius: 10px 10px 0 0;
+}
+
+
+/* Give form elements consistent margin, padding and line height */
+
+#contactForm ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#contactForm ul li {
+  margin: .9em 0 0 0;
+  padding: 0;
+}
+
+#contactForm input, #contactForm label {
+  line-height: 1em;
+}
+
+
+/* The field labels */
+
+label {
+  display: block;
+  float: left;
+  clear: left;
+  text-align: right;
+  width: 28%;
+  padding: .4em 0 0 0;
+  margin: .15em .5em 0 0;
+  font-weight: bold;
+}
+
+
+/* The fields */
+
+#contactForm input, #contactForm textarea {
+  display: block;
+  margin: 0;
+  padding: .4em;
+  width: 67%;
+  font-family: "Georgia", serif;
+  font-size: 1em;
+  border: 1px solid #aaa;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;    
+  border-radius: 5px;
+  -moz-box-shadow: rgba(0,0,0,.2) 0 1px 4px inset;
+  -webkit-box-shadow: rgba(0,0,0,.2) 0 1px 4px inset;
+  box-shadow: rgba(0,0,0,.2) 0 1px 4px inset;
+  background: #fff;
+}
+
+#contactForm textarea {
+  height: 13em;
+  line-height: 1.5em;
+  resize: none;
+}
+
+
+/* Place a border around focused fields, and hide the inner shadow */
+
+ #contactForm *:focus{
+  border: 1px solid #66f;
+  outline: none;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+
+/* Display correctly filled-in fields with a green background */
+
+ #contactForm input:valid, #contactForm textarea:valid {
+  background: #dfd;
+}
+
+
+/* The Send and Cancel buttons */
+
+ #contactForm input[type="submit"],  #contactForm input[type="button"] {
+  float: right;
+  margin: 2em 1em 0 1em;
+  width: 10em;
+  padding: .5em;
+  border: 1px solid #666;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;  
+  border-radius: 10px;
+  -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  color: #fff;
+  background: #0a0;
+  font-size: 1em;
+  line-height: 1em;
+  font-weight: bold;
+  opacity: .7;
+  -webkit-appearance: none;
+  -moz-transition: opacity .5s;
+  -webkit-transition: opacity .5s;
+  -o-transition: opacity .5s;
+  transition: opacity .5s;
+}
+
+ #contactForm input[type="submit"]:hover,
+ #contactForm input[type="submit"]:active,
+ #contactForm input[type="button"]:hover,
+ #contactForm input[type="button"]:active {
+  cursor: pointer;
+  opacity: 1;
+}
+
+ #contactForm input[type="submit"]:active,  input[type="button"]:active {
+  color: #333;
+  background: #eee;
+  -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+  box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+}
+
+
+ #contactForm input[type="button"] {
+  background: #f33;
+}
+
+
+
+#notesBox
+{
+	position: fixed;
+	margin-right: 50%;
+	margin-top: 10%;
+	padding : 2%;
+	color: #333;
+    background: #eee;
+    -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+    -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+    box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+}
+
+#notesBox textarea
+{ display: block;
+  margin: 0;
+  font-family: "Georgia", serif;
+  font-size: 1em;
+  border: 1px solid #aaa;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;    
+  border-radius: 5px;
+  -moz-box-shadow: rgba(0,0,0,.2) 0 1px 4px inset;
+  -webkit-box-shadow: rgba(0,0,0,.2) 0 1px 4px inset;
+  box-shadow: rgba(0,0,0,.2) 0 1px 4px inset;
+  background: #fff;
+  
+	}
+
+#tweetBox
+{
+	position: fixed;
+	margin-left: 65%;
+	margin-top: 10%;
+	padding : 2%;
+	color: #333;
+    background: #eee;
+    -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+    -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+    box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+}
+
+#tweetBox h2, #notesBox h2{
+  font-size: 1em;
+  font-style: italic;
+  letter-spacing: .05em; 
+  text-align:center;
+  margin: 0 0 0 0;  
+  width: 100%;  
+  color: white;
+  background: #0191C8 url('images/stamp.jpg') no-repeat 15em -3em; /* http://morguefile.com/archive/display/606433 */
+  border-bottom: 1px solid #aaa;
+  border-radius: 0 0 0 0;
+}
+
+
+.divider{
+    color:black;
+    width:100%;
+    margin:10px auto;
+    overflow:hidden;
+    text-align:center;   
+    line-height:1.2em;
+	}
+
+.divider:before{
+    content:"";
+    vertical-align:top;
+    display:inline-block;
+    width:100%;
+    height:0.65em;
+    border-bottom:1px solid black;
+    box-shadow: 10px 10px 5px #888888;
+   
+}
+
+
+ul.tweetFavList{
+	
+	width:600px;
+	list-style:none;	
+	display: inline;
+	font-size: 20px;
+	
+	
+}
+
+ul.tweetFavList p{
+	display: inline;
+	font-size: 12px;	
+}
+
+
+
+/* Coloring the links differently */
+
+ul.tweetFavList a.link		{ color:#aed080;}
+ul.tweetFavList a.mention	{ color:#6fc6d9;}
+ul.tweetFavList a.hash		{ color:#dd90e9;}
+
+
+/* The colorful info boxes */
+
+ul.tweetFavList .user,
+ul.tweetFavList .retweet,
+ul.tweetFavList .date{
+	float:left;
+	padding:4px 8px;
+	color:#fff !important;
+	text-decoration:none;
+	font-size:11px;
+	box-shadow: 1px 1px 1px rgba(33, 33, 33, 0.3);
+}
+
+ul.tweetFavList .user{
+	background-color:#6fc6d9;
+}
+
+ul.tweetFavList .retweet{
+	background-color:#dd90e9;
+	cursor:default;
+}
+
+ul.tweetFavList .date{
+	background-color:#aed080;
+}
+
+
+
+.Share.button, .Share.button:visited {
+	background-color: #5B74A8;
+	border-color: #29447E #29447E #1A356E;
+	border:1px solid #999;
+	-webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+	color: #FFFFFF;
+	cursor: pointer;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: center;
+	width: 50px;
+	padding: 5px;
+	border : 0px;
+	float:right;
+	margin-right:10px;
+}
+#sharebtn {
+	padding:20px 5px;
+}
+
+/*
+
+
+#wrapper {
+	width:800px;
+	margin-top:100px;
+	margin-left: auto;
+	margin-right: auto
+}
+#wall {
+	border:  solid 1px #BDC7D8;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	margin-bottom:6px;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:15px;
+	text-align: left;
+	width:750px;
+}
+
+.info {
+	width:360px;
+	height:100px;
+	float:left;
+	margin:15px
+}
+#prev {
+	cursor:pointer;
+}
+#next {
+	cursor:pointer;
+}
+#totalimg {
+	font-size:9px;
+	color:#000000;
+	float:left;
+	margin:5px;
+}
+
+label.title {
+	font-size:12px;
+	font-weight:bold;
+	cursor:pointer;
+}
+label.url {
+	font-size: 11px;
+	font-weight: normal;
+	color: #666;
+}
+label.desc {
+	font-size:11px;
+	cursor:pointer;
+}
+.title:hover, .desc:hover {
+	background-color:#FFFF99
+}
+.images {
+	width:100px;
+	height:100px;
+	float:left;
+	margin:15px 23px 15px 15px;
+}
+#loader {
+	margin:16px 17px 7px 7px;
+}
+#fetched_data {
+	height:125px;
+	margin-bottom:10px;
+}
+#textareaWrap {
+	text-align: center;
+	background-color: #F2F2F2;
+	height:135px;
+	border:solid 1px #B4BBCD;
+	border-width: 0 1px 1px;
+}
+
+
+#wallz{
+	
+	margin-top:25px;
+	margin-left: auto;
+	margin-right: auto
+}
+
+
+
+
+.fb_wall li{
+	border-bottom:1px solid #E9E9E9;
+	list-style: none;
+	margin-bottom: 20px;
+	overflow: hidden;
+	padding-bottom: 25px;
+	position: relative;
+}
+
+
+
+.fb_wall li img.avatar{
+	float:left;
+}
+
+
+
+.fb_wall h2{
+	font-size:16px;
+	font-weight:normal;
+	margin-bottom: 5px;
+}
+
+
+
+.fb_wall .status{
+	width:500px;
+	padding-left:65px;
+}
+
+
+
+.fb_wall .img_attachment{
+	font-size: 12px;
+	margin-top: 14px;
+	overflow: hidden;
+	padding-left: 10px;
+}
+
+.fb_wall .data{
+	display:table-cell;
+	vertical-align:top;
+}
+
+.fb_wall img.external_pic{
+	float:left;
+	margin-right: 10px;
+}
+
+
+
+
+.fb_wall p.likes{
+	color: #BBBBBB;
+	font-size: 11px;
+	padding: 15px 0 0 65px;
+}
+
+
+
+.fb_wall a, a:visited {
+	text-decoration:none;
+	outline:none;
+	color:#3B5998;
+	 font-weight: bold;
+	 font-size: 11px;
+}
+
+.fb_wall a:hover{
+	text-decoration:underline;
+}
+
+.fb_wall p.caption ,p.description{
+	color:#808080;
+	font-size: 11px;
+}
+.fb_wall p.message {
+	color: #000000;
+    font-size: 11px;
+    font-weight: normal;
+}
+*/
+
+</style>
+
+
