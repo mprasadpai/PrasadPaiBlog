@@ -1,7 +1,7 @@
 <html>
 <head><Title>Prasad Pai Blog</Title>
 <link rel="stylesheet" type="text/css" href="all.css">
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script><base>
 <script type="text/javascript" src="Feedback/FeedBack.js"></script>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 </head>
@@ -12,10 +12,25 @@
 <a href="#contactForm"><input type="button" id="btnFeedback" value="Feedback"></input></a>
 
 <?php
+session_start();
+if($_SESSION['logged_in']==true)
+{
+	echo 'Logged in as: '.$_SESSION['username'];
+	echo '<a href="Login/logout.php">Logout</a>';
+}
+else
+{
+	echo '<a href="Login/main_login.php">Login</a>';
+
+}
+
 include ( $_SERVER['DOCUMENT_ROOT'] . '/PrasadPaiBlog/User_Tracker/visitor_tracking.php');
 include ( $_SERVER['DOCUMENT_ROOT'] . '/PrasadPaiBlog/User_Tracker/display_visits.php');
-echo 'You are Visitor Number :' . $result->num_rows .'</br>';
+echo '   You are Visitor Number :' . $result->num_rows .'</br>';
 ?> 
+
+
+
 
 <div id="tweetBox">
 <h2>Favourite Tweets</h2>
@@ -27,11 +42,7 @@ showTweets();
 
 
 <div id="notesBox">
-<h2>Post App</h2>
-<?php
-include ( $_SERVER['DOCUMENT_ROOT'] . '/PrasadPaiBlog/Post2Wall/index.php');
 
-?>
 </div>
 
 

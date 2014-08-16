@@ -4,7 +4,7 @@ $(function(){
 	// Looping through the p elements
 	// and calling the splitLines plugin
 	
-	$('ul.tweetFavList p').each(function(){
+	/*$('ul.tweetFavList p').each(function(){
 		$(this).addClass('sliced').splitLines({width:width});
-	});
+	});*/
 });
